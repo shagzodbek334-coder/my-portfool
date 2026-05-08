@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "projects": "Проекты",
+    "blog": "Блог",
+    "contact": "Контакт"
+  },
+  "hero": {
+    "greeting": "Привет, я",
+    "name": "Shaxzod",
+    "title": "Frontend Разработчик",
+    "bio": "Создаю красивые и быстрые интерфейсы с React и современными веб-технологиями. Опыт 3+ лет.",
+    "cta_contact": "Связаться",
+    "cta_projects": "Проекты",
+    "available": "Доступен для работы"
+  },
+  "about": {
+    "title": "Обо мне",
+    "subtitle": "Моя история",
+    "bio": "Я frontend разработчик с более чем 3-летним опытом создания современных веб-приложений. Имею глубокий опыт в экосистеме React и стремлюсь улучшать пользовательский опыт.",
+    "experience": "Опыт",
+    "years": "3+ лет",
+    "projects_done": "20+ проектов",
+    "clients": "10+ клиентов",
+    "skills_title": "Навыки",
+    "education_title": "Образование",
+    "education_degree": "Компьютерные науки",
+    "education_school": "Ташкентский университет информационных технологий",
+    "education_year": "2019 - 2023",
+    "soft_skills": "Мягкие навыки",
+    "work_process": "Рабочий процесс"
+  },
+  "projects": {
+    "title": "Проекты",
+    "subtitle": "Мои работы",
+    "filter_all": "Все",
+    "filter_react": "React",
+    "filter_responsive": "Responsive",
+    "filter_uiux": "UI/UX",
+    "filter_landing": "Landing",
+    "view_demo": "Смотреть демо",
+    "view_code": "Смотреть код",
+    "close": "Закрыть"
+  },
+  "blog": {
+    "title": "Блог",
+    "subtitle": "Мои записи",
+    "read_more": "Читать далее",
+    "min_read": "мин чтения",
+    "tags": "Теги"
+  },
+  "contact": {
+    "title": "Контакт",
+    "subtitle": "Напишите мне",
+    "name": "Ваше имя",
+    "email": "Email",
+    "message": "Сообщение",
+    "send": "Отправить",
+    "sending": "Отправляется...",
+    "success": "Сообщение успешно отправлено!",
+    "error": "Произошла ошибка. Попробуйте снова.",
+    "copy_email": "Скопировать email",
+    "copied": "Скопировано!"
+  },
+  "music": {
+    "title": "Музыка",
+    "playlist": "Плейлист",
+    "now_playing": "Сейчас играет"
+  },
+  "footer": {
+    "rights": "Все права защищены",
+    "made_with": "Сделано с ❤️"
+  },
+  "theme": {
+    "light": "Светлая тема",
+    "dark": "Тёмная тема"
+  },
+  "loader": {
+    "loading": "Загрузка..."
+  }
+}

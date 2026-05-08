@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Men haqimda",
+    "projects": "Loyihalar",
+    "blog": "Blog",
+    "contact": "Aloqa"
+  },
+  "hero": {
+    "greeting": "Salom, men",
+    "name": "Shaxzod",
+    "title": "Frontend Developer",
+    "bio": "React va zamonaviy web texnologiyalar bilan chiroyli va tezkor interfeylar yarataman. 3+ yillik tajriba.",
+    "cta_contact": "Bog'lanish",
+    "cta_projects": "Loyihalar",
+    "available": "Ish uchun mavjud"
+  },
+  "about": {
+    "title": "Men haqimda",
+    "subtitle": "Mening hikoyam",
+    "bio": "Men frontend developer bo'lib, 3 yildan ortiq vaqt davomida zamonaviy web ilovalar yaratib kelaman. React ekotizimida chuqur tajribaga egaman va foydalanuvchi tajribasini yaxshilashga ishtiyoqim baland.",
+    "experience": "Tajriba",
+    "years": "3+ yil",
+    "projects_done": "20+ loyiha",
+    "clients": "10+ mijoz",
+    "skills_title": "Ko'nikmalar",
+    "education_title": "Ta'lim",
+    "education_degree": "Kompyuter Fanlari",
+    "education_school": "Toshkent Axborot Texnologiyalari Universiteti",
+    "education_year": "2019 - 2023",
+    "soft_skills": "Soft Skills",
+    "work_process": "Ish jarayoni"
+  },
+  "projects": {
+    "title": "Loyihalar",
+    "subtitle": "Mening ishlarim",
+    "filter_all": "Barchasi",
+    "filter_react": "React",
+    "filter_responsive": "Responsive",
+    "filter_uiux": "UI/UX",
+    "filter_landing": "Landing",
+    "view_demo": "Demo ko'rish",
+    "view_code": "Kod ko'rish",
+    "close": "Yopish"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Mening yozuvlarim",
+    "read_more": "Ko'proq o'qish",
+    "min_read": "daqiqa o'qish",
+    "tags": "Teglar"
+  },
+  "contact": {
+    "title": "Bog'lanish",
+    "subtitle": "Menga yozing",
+    "name": "Ismingiz",
+    "email": "Email",
+    "message": "Xabar",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "success": "Xabar muvaffaqiyatli yuborildi!",
+    "error": "Xatolik yuz berdi. Qayta urinib ko'ring.",
+    "copy_email": "Emailni nusxalash",
+    "copied": "Nusxalandi!"
+  },
+  "music": {
+    "title": "Musiqa",
+    "playlist": "Playlist",
+    "now_playing": "Hozir ijro etilmoqda"
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan",
+    "made_with": "❤️ bilan yaratildi"
+  },
+  "theme": {
+    "light": "Yorug' rejim",
+    "dark": "Qorong'u rejim"
+  },
+  "loader": {
+    "loading": "Yuklanmoqda..."
+  }
+}
