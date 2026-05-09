@@ -8,9 +8,9 @@
   },
   "hero": {
     "greeting": "Salom, men",
-    "name": "Shaxzod",
+    "name": "Shaxzodbek",
     "title": "Frontend Developer",
-    "bio": "React va zamonaviy web texnologiyalar bilan chiroyli va tezkor interfeylar yarataman. 3+ yillik tajriba.",
+    "bio": "React va zamonaviy web texnologiyalar bilan chiroyli va tezkor interfeylar yarataman. 1 yillik tajriba.",
     "cta_contact": "Bog'lanish",
     "cta_projects": "Loyihalar",
     "available": "Ish uchun mavjud"
@@ -18,15 +18,15 @@
   "about": {
     "title": "Men haqimda",
     "subtitle": "Mening hikoyam",
-    "bio": "Men frontend developer bo'lib, 3 yildan ortiq vaqt davomida zamonaviy web ilovalar yaratib kelaman. React ekotizimida chuqur tajribaga egaman va foydalanuvchi tajribasini yaxshilashga ishtiyoqim baland.",
+    "bio": "Men frontend developer bo'lib, 1 yildan ortiq vaqt davomida zamonaviy web saytlar yaratib kelaman. React ekotizimida chuqur tajribaga egaman va foydalanuvchi tajribasini yaxshilashga ishtiyoqim baland.",
     "experience": "Tajriba",
-    "years": "3+ yil",
+    "years": "1 yil",
     "projects_done": "20+ loyiha",
     "clients": "10+ mijoz",
     "skills_title": "Ko'nikmalar",
     "education_title": "Ta'lim",
     "education_degree": "Kompyuter Fanlari",
-    "education_school": "Toshkent Axborot Texnologiyalari Universiteti",
+    "education_school": "6-maktab",
     "education_year": "2019 - 2023",
     "soft_skills": "Soft Skills",
     "work_process": "Ish jarayoni"

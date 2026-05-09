@@ -21,6 +21,25 @@ body {
   overflow-x: hidden;
 }
 
+/* Neon grid background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 159, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 159, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme='light'] body::before {
+  background-image:
+    linear-gradient(rgba(0, 168, 107, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 168, 107, 0.04) 1px, transparent 1px);
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
   width: 6px;
@@ -33,10 +52,14 @@ body {
   border-radius: 3px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
 /* ===== SELECTION ===== */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: var(--text-primary);
+  background: rgba(0, 255, 159, 0.25);
+  color: var(--bg-primary);
 }
 
 /* ===== LINKS ===== */
@@ -70,6 +93,56 @@ button {
   padding: 100px 0;
 }
 
+/* ===== RESPONSIVE ===== */
+
+/* Large desktop */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding: 0 32px;
+  }
+  .section {
+    padding: 80px 0;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+  .section {
+    padding: 48px 0;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 12px;
+  }
+  .section {
+    padding: 36px 0;
+  }
+}
+
 .section-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
@@ -78,6 +151,8 @@ button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 159, 0.4));
 }
 
 .section-subtitle {
@@ -117,7 +192,7 @@ button {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 159, 0.5), 0 8px 25px rgba(0, 255, 159, 0.3);
 }
 
 .btn-outline {
@@ -158,8 +233,8 @@ button {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 159, 0.4), 0 0 20px rgba(0, 255, 159, 0.2); }
+  50%       { box-shadow: 0 0 20px rgba(0, 255, 159, 0.8), 0 0 40px rgba(0, 255, 159, 0.4); }
 }
 
 @keyframes spin {
@@ -172,18 +247,5 @@ button {
   50% { opacity: 0; }
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .section {
-    padding: 70px 0;
-  }
-  .container {
-    padding: 0 16px;
-  }
-}
 
-@media (max-width: 576px) {
-  .section {
-    padding: 50px 0;
-  }
-}
+

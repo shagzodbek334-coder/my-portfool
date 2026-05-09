@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import {
+  FaReact, FaGitAlt, FaNodeJs, FaEnvelope,
+} from 'react-icons/fa';
+import {
+  SiJavascript, SiTypescript, SiNextdotjs, SiRedux,
+} from 'react-icons/si';
+import { IoClose } from 'react-icons/io5';
+import Scene3D from '../components/Scene3D';
 import './Home.css';
 
 const techStack = [
-  { name: 'React', icon: '⚛️' },
-  { name: 'JavaScript', icon: '🟨' },
-  { name: 'TypeScript', icon: '🔷' },
-  { name: 'CSS', icon: '🎨' },
-  { name: 'Next.js', icon: '▲' },
-  { name: 'Git', icon: '🔀' },
-  { name: 'Node.js', icon: '🟢' },
-  { name: 'Redux', icon: '🔮' },
+  { name: 'React',      icon: <FaReact color="#61DAFB" /> },
+  { name: 'JavaScript', icon: <SiJavascript color="#F7DF1E" /> },
+  { name: 'TypeScript', icon: <SiTypescript color="#3178C6" /> },
+  { name: 'CSS',        icon: <span style={{fontSize:'1rem', fontWeight:800, color:'#1572B6'}}>CSS</span> },
+  { name: 'Next.js',    icon: <SiNextdotjs /> },
+  { name: 'Git',        icon: <FaGitAlt color="#F05032" /> },
+  { name: 'Node.js',    icon: <FaNodeJs color="#339933" /> },
+  { name: 'Redux',      icon: <SiRedux color="#764ABC" /> },
 ];
 
 const typingTexts = [
@@ -50,8 +58,7 @@ function useTyping(texts, speed = 80, pause = 2000) {
 }
 
 const stats = [
-  { value: '3+', label: 'Years Experience' },
-  { value: '20+', label: 'Projects Done' },
+  { value: '1', label: 'Years Experience' },
   { value: '10+', label: 'Happy Clients' },
   { value: '5K+', label: 'GitHub Commits' },
 ];
@@ -59,9 +66,22 @@ const stats = [
 export default function Home() {
   const { t } = useTranslation();
   const typedText = useTyping(typingTexts);
+  const [imgOpen, setImgOpen] = useState(false);
 
   return (
     <main className="home">
+      {/* Image Modal */}
+      {imgOpen && (
+        <div className="avatar-modal" onClick={() => setImgOpen(false)}>
+          <div className="avatar-modal__inner" onClick={e => e.stopPropagation()}>
+            <button className="avatar-modal__close" onClick={() => setImgOpen(false)} aria-label="Close">
+              <IoClose size={18} />
+            </button>
+            <img src="/avatar.jpg" alt="Shaxzodbek" />
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero__bg" aria-hidden="true">
@@ -81,10 +101,17 @@ export default function Home() {
           ))}
         </div>
 
+        {/* 3D Model */}
+        <div className="hero__3d" aria-hidden="true">
+          <Scene3D />
+        </div>
+
         <div className="container hero__content">
-          <div className="hero__badge">
-            <span className="hero__badge-dot" />
-            {t('hero.available')}
+          <div className="hero__avatar" onClick={() => setImgOpen(true)}>
+            <div className="hero__avatar-inner">
+              <img src="/avatar.jpg" alt="Shaxzodbek" />
+            </div>
+            <div className="hero__avatar-ring" />
           </div>
 
           <h1 className="hero__title">
@@ -101,19 +128,8 @@ export default function Home() {
 
           <div className="hero__cta">
             <Link to="/contact" className="btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
+              <FaEnvelope size={15} />
               {t('hero.cta_contact')}
-            </Link>
-            <Link to="/projects" className="btn-outline">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                <line x1="8" y1="21" x2="16" y2="21"/>
-                <line x1="12" y1="17" x2="12" y2="21"/>
-              </svg>
-              {t('hero.cta_projects')}
             </Link>
           </div>
 
@@ -121,7 +137,7 @@ export default function Home() {
           <div className="hero__stack">
             {techStack.map(tech => (
               <div key={tech.name} className="hero__tech" title={tech.name}>
-                <span>{tech.icon}</span>
+                <span className="hero__tech-icon">{tech.icon}</span>
                 <span>{tech.name}</span>
               </div>
             ))}

@@ -1,10 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from '../components/ScrollToTop';
 
-const Home = lazy(() => import('../pages/Home'));
-const About = lazy(() => import('../pages/About'));
-const Projects = lazy(() => import('../pages/Projects'));
-const Blog = lazy(() => import('../pages/Blog'));
+const Home    = lazy(() => import('../pages/Home'));
+const About   = lazy(() => import('../pages/About'));
 const Contact = lazy(() => import('../pages/Contact'));
 
 function PageLoader() {
@@ -30,15 +29,16 @@ function PageLoader() {
 
 export default function AppRouter() {
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </Suspense>
+    <>
+      <ScrollToTop />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/"       element={<Home />} />
+          <Route path="/about"  element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*"       element={<Home />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 }

@@ -4,10 +4,10 @@ import { ThemeProvider } from './context/ThemeContext';
 import { MusicProvider } from './context/MusicContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import MusicPlayer from './components/MusicPlayer';
 import Loader from './components/Loader';
 import AppRouter from './router/index';
 import './i18n';
+import './App.css';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -26,9 +26,10 @@ export default function App() {
         <BrowserRouter>
           <div className="app-layout">
             <Navbar />
-            <AppRouter />
-            <Footer />
-            <MusicPlayer />
+            <div className="app-main">
+              <AppRouter />
+              <Footer />
+            </div>
           </div>
         </BrowserRouter>
       </MusicProvider>

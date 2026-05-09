@@ -1,72 +1,74 @@
-/* ===== CSS VARIABLES ===== */
+/* ===== CSS VARIABLES — CYBERPUNK NEON ===== */
 :root {
-  /* Dark Theme (default) */
-  --bg-primary: #020617;
-  --bg-secondary: #0F172A;
-  --bg-card: #0F172A;
-  --bg-card-hover: #1E293B;
-  --bg-glass: rgba(15, 23, 42, 0.8);
+  --bg-primary:    #050508;
+  --bg-secondary:  #08080f;
+  --bg-card:       #0c0c18;
+  --bg-card-hover: #111125;
+  --bg-glass:      rgba(8, 8, 15, 0.92);
 
-  --primary: #3B82F6;
-  --primary-hover: #2563EB;
-  --secondary: #8B5CF6;
-  --accent: #06B6D4;
-  --accent-pink: #EC4899;
+  --primary:       #00ff9f;
+  --primary-hover: #00e68a;
+  --secondary:     #00d4ff;
+  --accent:        #7b2fff;
+  --accent-yellow: #ffe600;
 
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  --text-primary:   #e8fff5;
+  --text-secondary: #7aaaa0;
+  --text-muted:     #3d6b62;
 
-  --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(59, 130, 246, 0.4);
+  --border:       rgba(0, 255, 159, 0.1);
+  --border-hover: rgba(0, 255, 159, 0.45);
 
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow:      0 4px 24px rgba(0, 0, 0, 0.8);
+  --shadow-glow: 0 0 30px rgba(0, 255, 159, 0.2);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.6);
 
-  --gradient-primary: linear-gradient(135deg, #3B82F6, #8B5CF6);
-  --gradient-accent: linear-gradient(135deg, #06B6D4, #3B82F6);
-  --gradient-hero: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.15) 0%, transparent 60%),
-                   radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  --gradient-primary: linear-gradient(135deg, #00ff9f, #00d4ff);
+  --gradient-accent:  linear-gradient(135deg, #7b2fff, #00d4ff);
+  --gradient-hero:
+    radial-gradient(ellipse at top left,  rgba(0, 255, 159, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
   --radius-full: 9999px;
 
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition:      all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-fast: all 0.15s ease;
   --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   --header-height: 70px;
-  --font-mono: 'Fira Code', monospace;
+  --sidebar-width: 220px;
+  --font-mono:     'Fira Code', monospace;
 }
 
 [data-theme='light'] {
-  --bg-primary: #F8FAFC;
-  --bg-secondary: #F1F5F9;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #F8FAFC;
-  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-primary:    #f0fff8;
+  --bg-secondary:  #e0fff2;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #f0fff8;
+  --bg-glass:      rgba(255, 255, 255, 0.92);
 
-  --primary: #2563EB;
-  --primary-hover: #1D4ED8;
-  --secondary: #7C3AED;
-  --accent: #0891B2;
-  --accent-pink: #DB2777;
+  --primary:       #00a86b;
+  --primary-hover: #008f5a;
+  --secondary:     #0099bb;
+  --accent:        #5b1fd4;
+  --accent-yellow: #cc9900;
 
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-primary:   #021a10;
+  --text-secondary: #1a5c42;
+  --text-muted:     #3d8c6a;
 
-  --border: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(37, 99, 235, 0.4);
+  --border:       rgba(0, 168, 107, 0.15);
+  --border-hover: rgba(0, 168, 107, 0.45);
 
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.1);
+  --shadow:      0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 30px rgba(0, 168, 107, 0.15);
   --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.08);
 
-  --gradient-hero: radial-gradient(ellipse at top, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
-                   radial-gradient(ellipse at bottom right, rgba(124, 58, 237, 0.06) 0%, transparent 50%);
+  --gradient-hero:
+    radial-gradient(ellipse at top left,  rgba(0, 168, 107, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(0, 153, 187, 0.06) 0%, transparent 50%);
 }

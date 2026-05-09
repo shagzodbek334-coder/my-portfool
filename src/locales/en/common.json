@@ -8,9 +8,9 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Shaxzod",
+    "name": "Shaxzodbek",
     "title": "Frontend Developer",
-    "bio": "I build beautiful and fast interfaces with React and modern web technologies. 3+ years of experience.",
+    "bio": "I build beautiful and fast interfaces with React and modern web technologies. 1 year of experience.",
     "cta_contact": "Contact Me",
     "cta_projects": "View Projects",
     "available": "Available for work"
@@ -20,13 +20,13 @@
     "subtitle": "My Story",
     "bio": "I'm a frontend developer with over 3 years of experience building modern web applications. I have deep expertise in the React ecosystem and am passionate about improving user experience.",
     "experience": "Experience",
-    "years": "3+ Years",
+    "years": "1 Year",
     "projects_done": "20+ Projects",
     "clients": "10+ Clients",
     "skills_title": "Skills",
     "education_title": "Education",
     "education_degree": "Computer Science",
-    "education_school": "Tashkent University of Information Technologies",
+    "education_school": "School #6",
     "education_year": "2019 - 2023",
     "soft_skills": "Soft Skills",
     "work_process": "Work Process"

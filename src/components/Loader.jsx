@@ -1,35 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import './Loader.css';
 
+const NAME = 'Shaxzodbek';
+
 export default function Loader({ onFinish }) {
-  const [progress, setProgress] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(0);
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(onFinish, 300);
-          return 100;
-        }
-        return prev + 2;
-      });
-    }, 30);
-    return () => clearInterval(interval);
-  }, [onFinish]);
+    // Harflarni birma-bir chiqar
+    if (visibleCount < NAME.length) {
+      const t = setTimeout(() => setVisibleCount(v => v + 1), 120);
+      return () => clearTimeout(t);
+    } else {
+      // Hammasi chiqdi — biroz kut, keyin fade out
+      const t = setTimeout(() => {
+        setDone(true);
+        setTimeout(onFinish, 600);
+      }, 800);
+      return () => clearTimeout(t);
+    }
+  }, [visibleCount, onFinish]);
 
   return (
-    <div className="loader">
+    <div className={`loader ${done ? 'loader--out' : ''}`}>
       <div className="loader__content">
-        <div className="loader__logo">
-          <span className="loader__logo-bracket">&lt;</span>
-          <span className="loader__logo-text">Dev</span>
-          <span className="loader__logo-bracket">/&gt;</span>
+        <div className="loader__name">
+          {NAME.split('').map((char, i) => (
+            <span
+              key={i}
+              className={`loader__char ${i < visibleCount ? 'loader__char--visible' : ''}`}
+              style={{ transitionDelay: `${i * 0.05}s` }}
+            >
+              {char}
+            </span>
+          ))}
         </div>
-        <div className="loader__bar-wrap">
-          <div className="loader__bar" style={{ width: `${progress}%` }} />
+        <div className="loader__line">
+          <div
+            className="loader__line-fill"
+            style={{ width: `${(visibleCount / NAME.length) * 100}%` }}
+          />
         </div>
-        <p className="loader__percent">{progress}%</p>
       </div>
     </div>
   );

@@ -91,7 +91,7 @@
   color: var(--primary);
   border-color: var(--primary);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
 }
 
 .footer__bottom {
@@ -104,6 +104,20 @@
   font-size: 0.85rem;
 }
 
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .footer__top {
     grid-template-columns: 1fr 1fr;
